@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="shortcut icon" href="/favicon.ico"> 
+  </head>
+  <body>
+    <header class="main-menu">
+      <h1>Maciej Żok</h1>
+      <nav>
+        <ul>
+          <li><a href="https://github.com/macie">github</a></li>
+          <li><a href="https://www.transifex.com/accounts/profile/macie">transifex</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="content">
+    {{ content }}
+    </section>
+    <footer>
+      <p>2014 | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></p>
+    </footer>
+
+    <script type="text/javascript">
+      WebFontConfig = {
+      google: { families: [ 'Poiret+One::latin,latin-ext', 'Ubuntu+Mono:400,700,400italic:latin' ] }
+      };
+      (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+      })();
+  </script>
+  </body>
+</html>
