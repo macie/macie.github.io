@@ -42,7 +42,7 @@ p {
 .main-menu ul {
   margin-left: 0.2rem;
   margin-top: -1.1rem;
-  padding: 0.1rem 1.45rem;
+  padding: 0.15rem 1.45rem;
 
   font-size: 0.6rem;
   line-height: 0.945rem;
@@ -58,8 +58,8 @@ p {
 }
 
 .main-menu li a {
-  margin: -0.1rem -2px;
-  padding: 0.1rem 0.7rem;
+  margin: 0 -2px;
+  padding: 0.21rem 0.7rem;
 
   background-color: #384B59;
   color: #fff;
