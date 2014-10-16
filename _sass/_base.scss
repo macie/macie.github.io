@@ -1,0 +1,31 @@
+$color-white: #fbfcfc;
+$color-black: #474645;
+$color-gray: #8d8c8b;
+$color-blue: #21354e;
+$color-green: #a0d4a4;
+
+$page-width: 960px;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$susy: (
+  columns: 12,
+  gutters: 10px/70px,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3";
+@import "compass/layout";
+@import "susy";
+
+@mixin vertical-align($position) {
+  position: relative;
+  top: $position;
+  @include transform(translateY(-$position));
+}
