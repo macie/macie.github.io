@@ -1,3 +1,9 @@
+.bundle
+.sass-cache
+_site
+_vendor
+node_modules
+
 # Ignore docs files
 _gh_pages
 _site
