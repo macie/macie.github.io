@@ -10,33 +10,22 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   </head>
   <body>
-  <!--
-    <nav>
-      <ul>
-        <li><a href="#main-page">Maciej Żok</a></li>
-        <li><a href="#frontend">frontend</a></li>
-        <li><a href="#python">python</a></li>
-        <li><a href="#shell">shell</a></li>
-        <li><a href="#inne">>></a></li>
-      </ul>
-    </nav>
-    -->
-
     {{ content }}
-
+    
     <footer>
       <p>2014 | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></p>
     </footer>
 
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../js/jquery.stellar.min.js"></script>
     <script>
-    $(function(){
-      $.stellar({
-        horizontalScrolling: false,
-        verticalOffset: 50
+      $(function() {
+        $.stellar({
+          horizontalScrolling: false,
+          verticalOffset: 50
+        });
       });
-    });
     </script>
 
     <script>
