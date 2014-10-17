@@ -1,0 +1,23 @@
+$color-white: #fbfcfc;
+$color-black: #474645;
+$color-gray: #8d8c8b;
+$color-blue: #21354e;
+$color-green: #a0d4a4;
+
+$page-width: 960px;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+$susy: (
+  columns: 12,
+  gutters: 20px/60px,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/typography";
+@import "susy";
