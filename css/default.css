@@ -157,7 +157,7 @@ html, body {
 body {
   font-family: 'Roboto Condensed', sans-serif;
   background-color: #fbfcfc;
-  color: #21354e;
+  color: #211c3c;
 }
 /* line 30, ../_sass/default.scss */
 body section {
@@ -168,7 +168,7 @@ body section {
 }
 /* line 37, ../_sass/default.scss */
 body section header {
-  background-color: #21354e;
+  background-color: #211c3c;
   color: #a0d4a4;
 }
 /* line 41, ../_sass/default.scss */
@@ -299,7 +299,7 @@ body footer a:link {
   line-height: 1.25em;
   font-variant: normal;
   background-color: #fbfcfc;
-  color: #21354e;
+  color: #211c3c;
 }
 
 /* line 131, ../_sass/default.scss */
@@ -322,7 +322,7 @@ body footer a:link {
 /* line 138, ../_sass/default.scss */
 .gallery a {
   display: inline-block;
-  background-color: #030507;
+  background-color: #030205;
   border: none;
 }
 /* line 145, ../_sass/default.scss */
