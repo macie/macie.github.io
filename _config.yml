@@ -1,3 +1,18 @@
-url: maciej.xn--ok-vva.pl
+url: maciejzok.pl
 
-permalink: pretty
+permalink: none
+slugify: latin
+
+timezone: Europe/Warsaw
+
+sass:
+    sourcemap: true
+    style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "essay"

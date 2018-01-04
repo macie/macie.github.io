@@ -16,20 +16,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // grunt-contrib-cssmin
-        cssmin: {
-            minify: {
-                options: {
-                    banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> | <%= pkg.homepage %> */'
-                },
-                expand: true,
-                cwd: 'css/',
-                src: ['**/*.css', '!*.min.css'],
-                dest: 'css/',
-                ext: '.min.css'
-            }
-        },
-
         // grunt-contrib-watch
         watch: {
             options: {
@@ -37,10 +23,10 @@ module.exports = function(grunt) {
             },
             css: {
                 files: [
-                    'css/**/*.css',
-                    '!css/**/*.min.css'
+                    'assets/css/**/*.css',
+                    '!assets/css/**/*.min.css'
                 ],
-                tasks: ['cssmin']
+                tasks: ['exec:jekyll_build']
             },
             html: {
                 files: [
@@ -70,13 +56,12 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-exec');
 
     // default
     grunt.registerTask('default', [
-        'cssmin'
+        'exec:jekyll_build'
     ]);
 
     // prepare
