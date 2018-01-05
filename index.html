@@ -13,11 +13,13 @@ title: Maciej Żok
 	</ul>
 
 	{% for category in site.categories %}
-		<h2>{{ category | first }}</h2>
+		<h2 id="{{ category | first | downcase }}">{{ category | first | replace: "_", " " }}</h2>
 		<ul>
 		{% for posts in category %}
 			{% for post in posts %}
-				<li><a href="{{ post.url }}">{{ post.title }}</a><time>{{ post.date | date: '%m.%Y' }}</time></li>
+				{% if post.content != nil %}
+					<li><a href="{{ post.url }}">{{ post.title }}</a><time>{{ post.date | date: '%m.%Y' }}</time></li>
+				{% endif %}
 			{% endfor %}
 		{% endfor %}
 		</ul>

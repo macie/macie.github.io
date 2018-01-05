@@ -4,7 +4,7 @@ layout: default
 
 <header>
     <h1>Maciej Żok</h1>
-    <h2><a href="/#{{ page.categories | first | uri_escape }}">{{ page.categories | first }}</a></h2>
+    <h2><a href="/#{{ page.categories | first | downcase }}">{{ page.categories | first | replace: "_", " " }}</a></h2>
 </header>
 <article>
     <h1>{{ page.title }}</h1>
