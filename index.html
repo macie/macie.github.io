@@ -18,7 +18,7 @@ title: Maciej Żok
 		{% for posts in category %}
 			{% for post in posts %}
 				{% if post.content != nil %}
-					<li><a href="{{ post.url }}">{{ post.title }}</a><time>{{ post.date | date: '%m.%Y' }}</time></li>
+					<li><a href="{{ post.url }}">{{ post.title }}</a><time>{{ post.date | date: '%m.%Y' }} ({{ post.content | number_of_words | divided_by: 275.0 | floor | plus: 1 }} min.)</time></li>
 				{% endif %}
 			{% endfor %}
 		{% endfor %}
