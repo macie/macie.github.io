@@ -9,19 +9,32 @@ title: Maciej Żok
 <nav class="toc">
 	<h1>Spis treści</h1>
 	<ul>
-		<li><a href="#">O autorze</a></li>
+		{% for category in site.categories %}
+			{% if category contains "Frontyspis" %}
+				{% for posts in category %}
+					{% for post in posts %}
+						{% if post.content != nil %}
+							<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
 	</ul>
 
 	{% for category in site.categories %}
-		<h2 id="{{ category | first | downcase }}">{{ category | first | replace: "_", " " }}</h2>
-		<ul>
-		{% for posts in category %}
-			{% for post in posts %}
-				{% if post.content != nil %}
-					<li><a href="{{ post.url }}">{{ post.title }}</a><time>{{ post.date | date: '%m.%Y' }} ({{ post.content | number_of_words | divided_by: 275.0 | floor | plus: 1 }} min.)</time></li>
-				{% endif %}
+		{% if category contains "Frontyspis" %}
+		{% else %}
+			<h2 id="{{ category | first | downcase }}">{{ category | first | replace: "_", " " }}</h2>
+			<ul>
+			{% for posts in category %}
+				{% for post in posts %}
+					{% if post.content != nil %}
+						<li><a href="{{ post.url }}">{{ post.title }}</a><time>{{ post.date | date: '%m.%Y' }} ({{ post.content | number_of_words | divided_by: 275.0 | floor | plus: 1 }} min.)</time></li>
+					{% endif %}
+				{% endfor %}
 			{% endfor %}
-		{% endfor %}
-		</ul>
+			</ul>
+		{% endif %}
 	{% endfor %}
 </nav>
